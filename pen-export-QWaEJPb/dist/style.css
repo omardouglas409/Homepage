@@ -1,0 +1,47 @@
+/* =================
+  WRITE YOUR CSS HERE.
+  Check the ⌄ for help with formatting and validating your code.
+  You must write some CSS to complete this challenge.
+   ===================
+*/
+
+html,
+body {
+  margin: 0 ;
+  height: 100%;
+}
+
+/* don't edit this */
+.jest-lite-report__status--pass {
+  background: var(--color-pass);
+}
+.jest-lite-report__errors { display:none }
+
+
+body {
+  color: rgb(179, 181, 186);
+  background-color: black;
+  padding left:20px;
+  font-family: 'Oswald', sans-serif;
+  font-size:1.5em;
+}
+.header {
+  font-size:120%;
+  color: rgb(179, 181, 186);
+}
+.rust {
+  color: orange;
+}
+.ark {
+  color: purple;
+}
+#container{
+  width:50% ;
+  margin:0 auto;
+  background-color:;
+}
+
+section {
+  width:70%;
+  margin:0 auto;
+}
