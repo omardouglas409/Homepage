@@ -5,7 +5,7 @@
    ===================
 */
 
-const {
+/*const {
   core: { test, expect, run },
   prettify
 } = window.jestLite;
@@ -15,7 +15,7 @@ const {
   These are all the elements we will look for.
    ===================
 */
-const getHeader = document.querySelectorAll("header"),
+/*const getHeader = document.querySelectorAll("header"),
   getH1 = document.querySelectorAll("h1"),
   getSiteHeader = document.querySelectorAll(".c-site-header"),
   getAria = document.querySelectorAll('nav[aria-label="Main Site Links."]'),
@@ -33,7 +33,7 @@ const getHeader = document.querySelectorAll("header"),
    The tests will run every time you update your code.
    ===================
 */
-test("There is at least one header element", () => {
+/*test("There is at least one header element", () => {
   expect(getHeader.length).toBeGreaterThanOrEqual(1);
 });
 test("There is at least one h1", () => {
@@ -65,4 +65,45 @@ test("There are at least 500 words on the page", () => {
 });
 
 const console = document.getElementById("tests");
-prettify.toHTML(run(), console);
+prettify.toHTML(run(), console);*/
+var names;
+
+function getNumberOrString(value) {
+  // Convert a string value to a number if possible
+  let number_value = Number(value);
+  if (Number.isNaN(number_value)) {
+    return value
+  } else {
+    return number_value
+  }
+}
+
+function randomInt(n) {
+  // Return a random number from in [0, n[
+  return Math.floor(Math.random()*n);
+}
+
+function randomMember(arr) {
+  // Return a random member of the array
+  return arr[randomInt(arr.length)]
+}
+
+
+names = [];
+
+
+document.getElementById('button').addEventListener('click', (event) => {
+  names.push(getNumberOrString(document.getElementById('text').value));
+  let element_list = document.getElementById('list');
+  let new_li = document.createElement('li');
+  new_li.innerText = getNumberOrString(document.getElementById('text').value);
+
+  element_list.appendChild(new_li);
+
+});
+
+document.getElementById('button.2').addEventListener('click', (event) => {
+  let element_selected_name = document.getElementById('selected.name');
+  element_selected_name.innerText = randomMember(names);
+
+});
